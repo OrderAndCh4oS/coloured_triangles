@@ -1,3 +1,6 @@
+from colour_triangles.bulk_test_benchmark import bulk_test_benchmark
+from colour_triangles.current_micro_time import current_micro_time
+
 RGB = {'R', 'G', 'B'}
 
 
@@ -18,9 +21,6 @@ def triangle(row):
 
 
 if __name__ == '__main__':
-    import time
-
-    current_micro_time = lambda: int(round(time.time() * 1000000))
     start = current_micro_time()
     assert triangle('RBRGBRBGGRRRBGBBBGGRBRGBRBGGRRRBGBBBGG') == 'G'
     print(current_micro_time() - start)
